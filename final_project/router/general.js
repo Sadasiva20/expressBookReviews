@@ -29,7 +29,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
   //Write your code here
 
   const isbn = req.params.books.isbn;
-      res.send(JSON.stringify(isbn));
+      res.send(isbn);
 
 
 
@@ -38,7 +38,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
 public_users.get('/author/:author',function (req, res) {
   //Write your code here
   const author = req.params.books.author;
-        res.send(JSON.stringify(author));
+        res.send(author);
   
 });
 
@@ -47,7 +47,7 @@ public_users.get('/author/:author',function (req, res) {
 public_users.get('/title/:title',function (req, res) {
   //Write your code here
   const title = req.params.books.title;
-    res.send(JSON.stringify(title));
+    res.send(title);
    
 });
 
@@ -56,7 +56,7 @@ public_users.get('/review/:isbn',function (req, res) {
   //Write your code here
    const review = req.params.books.review;
 
-        res.send(JSON.stringify(review));
+        res.send(review);
   
 });
 
