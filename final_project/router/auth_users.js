@@ -7,9 +7,8 @@ let users = [];
 
 const isValid = (username)=>{ //returns boolean
 //write code to check is the username is valid
- username = users.find(user => user.username === username);
-
-if(username){
+username = users.filter((users));
+if(username.length >0 ){
    return true;
 }
 return false;
@@ -53,10 +52,9 @@ regd_users.post("/login", (req,res) => {
 regd_users.put("/auth/review/:isbn", (req, res) => {
   //Write your code here
   const isbn = req.params.isbn;
-  let review = req.body.review;
   if(books){
 
-    books[isbn]["reviews"].push(review);
+    books.push(isbn);
     return res.status(200).json({message: "Review added successfully"});
   }
    else{
