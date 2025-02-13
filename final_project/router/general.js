@@ -28,15 +28,17 @@ public_users.get('/',function (req, res) {
 public_users.get('/isbn/:isbn',function (req, res) {
   //Write your code here
 
-  const isbn = req.params.isbn;
-      res.send(JSON.stringify(books[isbn]));
+  const isbn = req.params.books.isbn;
+      res.send(JSON.stringify(isbn));
+
+
 
 });
 // Get book details based on author
 public_users.get('/author/:author',function (req, res) {
   //Write your code here
-  const author = req.params.author;
-        res.send(JSON.stringify(books[author]));
+  const author = req.params.books.author;
+        res.send(JSON.stringify(author));
   
 });
 
@@ -44,15 +46,18 @@ public_users.get('/author/:author',function (req, res) {
 // Get all books based on title
 public_users.get('/title/:title',function (req, res) {
   //Write your code here
-  const title = req.params.title;
-    res.send(JSON.stringify(books[title]));
+  const title = req.params.books.title;
+    res.send(JSON.stringify(title));
+   
 });
 
 //  Get book review
 public_users.get('/review/:isbn',function (req, res) {
   //Write your code here
-   const review = req.params.review;
-        res.send(JSON.stringify(books[review]));
+   const review = req.params.books.review;
+
+        res.send(JSON.stringify(review));
+  
 });
 
 module.exports.general = public_users;
